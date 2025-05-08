@@ -103,3 +103,21 @@ Git guarda la configuración en tres niveles, cada uno con su propio archivo:
 | Usuario     | `~/.gitconfig` o `~/.config/git/config`           | Configuración específica para el usuario actual.                               |
 | Proyecto    | `.git/config` (dentro del repositorio Git)        | Configuración específica para un repositorio en particular.
 
+## Establecer un editor predeterminado
+Puedes elegir un editor de texto como predeterminado para Git. Ejemplos:
+### Visual Studio Code:
+```bash
+git config --global core.editor "code --wait"
+```
+### Nano:
+```bash
+git config --global core.editor nano
+```
+### Vim:
+``` bash
+git config --global core.editor vim
+```
+## Habilitar colores en la salida de Git
+```bash
+git config --global color.ui auto
+```
