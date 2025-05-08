@@ -60,3 +60,46 @@ Git también organiza tu proyecto en tres áreas clave:
 - Si una versión del fichero está en el **Git directory**, está **confirmada**.
 - Si ha sido cambiada y luego agregada al **staging area**, está **preparada**.
 - Si ha sido modificada pero **no se ha preparado**, está en estado **modificado**.
+
+## Instalación de Git
+
+Para instalar Git en Debian, ejecuta los siguientes comandos en la terminal:
+```bash
+sudo apt install git
+```
+Verifica que la instalación fue exitosa:
+
+```bash
+git --version
+```
+
+## Configuración de Git
+Una vez instalado Git, es recomendable realizar la configuración inicial global, la cual se aplicará a todos los repositorios del usuario. Puedes revisar la documentación en la siguiente guía oficial: [Configuración de Git por primera vez](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+
+El  siguiente  comando  devuelve  una  lista  de  información  sobre  su  configuración  de  git, 
+incluido el nombre de usuario y el correo electrónico: 
+```bash
+git config -l 
+```
+
+
+Con el siguiente comando puedes configurar tu nombre de usuario: 
+```bash
+git config --global user.name "nethcor343"
+```
+ 
+Este  comando  le  permite  configurar  la  dirección  de  correo  electrónico  del  usuario  que 
+utilizará en sus confirmaciones. 
+
+```bash
+git config --global user.email "nethcordev343@gmail.com"
+```
+## Ruta de configuración
+Git guarda la configuración en tres niveles, cada uno con su propio archivo:
+
+| **Nivel**   | **Archivo de configuración**                      | **Descripción**                                                                 |
+|-------------|---------------------------------------------------|---------------------------------------------------------------------------------|
+| Sistema     | `/etc/gitconfig`                                  | Configuración para todos los usuarios del sistema (requiere privilegios root). |
+| Usuario     | `~/.gitconfig` o `~/.config/git/config`           | Configuración específica para el usuario actual.                               |
+| Proyecto    | `.git/config` (dentro del repositorio Git)        | Configuración específica para un repositorio en particular.
+
