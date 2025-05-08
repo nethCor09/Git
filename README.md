@@ -40,12 +40,23 @@ Un repositorio es el espacio donde Git almacena todos los ficheros de un proyect
 Un fichero, también llamado archivo, los ficheros son los elementos principales que se rastrean; pueden ser código fuente, imágenes, documentación, etc. Git detecta los cambios que se hacen en estos ficheros (como adiciones, eliminaciones o modificaciones) y permite registrarlos como parte del historial del proyecto.
 
 ## Estados en Git
-Git tiene tres **estados principales** en los que se pueden encontrar tus archivos:
+Git tiene tres **estados principales** en los que se pueden encontrar tus ficheros:
 | **Modificado (Modified)** | **Preparado (Staged)** | **Confirmado (Committed)** |
 |---------------------------|-------------------------|-----------------------------|
-| El archivo ha sido cambiado pero **aún no se ha preparado** para ser confirmado. | El archivo ha sido marcado con `git add` para **incluirlo en el próximo commit**. | El archivo ya ha sido **guardado de forma permanente en la base de datos de Git**. |
+| El fichero ha sido cambiado pero **aún no se ha preparado** para ser confirmado. | El fichero ha sido marcado con `git add` para **incluirlo en el próximo commit**. | El fichero ya ha sido **guardado de forma permanente en la base de datos de Git**. |
+
 ## Áreas Principales de Git
 Git también organiza tu proyecto en tres áreas clave:
 | **Directorio de Git** (*Git directory*) | **Directorio de trabajo** (*Working directory*) | **Área de preparación** (*Staging area*) |
 |----------------------------------------|------------------------------------------------|-------------------------------------------|
-| Es donde se almacenan **todos los metadatos** del repositorio, como el historial de versiones y la base de datos de objetos. Este directorio es la parte central de Git y se copia al clonar un repositorio. | Es una **copia de los archivos** extraída desde el Git directory. Aquí puedes ver, editar o eliminar archivos. Representa una versión específica del proyecto que puedes modificar. | Es un archivo (ubicado dentro del Git directory) que **registra qué cambios serán incluidos en el próximo commit**. También se le conoce como "índice" (*index*), aunque actualmente se prefiere el término "área de preparación". |
+| Es donde se almacenan **todos los metadatos** del repositorio, como el historial de versiones y la base de datos de objetos. Este directorio es la parte central de Git y se copia al clonar un repositorio. | Es una **copia de los fichero** extraída desde el Git directory. Aquí puedes ver, editar o eliminar fichero. Representa una versión específica del proyecto que puedes modificar. | Es un archivo (ubicado dentro del Git directory) que **registra qué cambios serán incluidos en el próximo commit**. También se le conoce como "índice" (*index*), aunque actualmente se prefiere el término "área de preparación". |
+
+#### Flujo de trabajo básico en Git
+1. **Modificas** fichero en tu directorio de trabajo.  
+2. **Preparas** esos fichero con `git add`, moviéndolos al área de preparación.  
+3. **Confirmas** los cambios con `git commit`, almacenándolos en el directorio de Git.
+
+#### Estado de los fichero en Git
+- Si una versión del fichero está en el **Git directory**, está **confirmada**.
+- Si ha sido cambiada y luego agregada al **staging area**, está **preparada**.
+- Si ha sido modificada pero **no se ha preparado**, está en estado **modificado**.
