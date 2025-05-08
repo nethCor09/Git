@@ -15,3 +15,18 @@ Estos sistemas, como Git, permiten que cada usuario tenga una copia completa del
 
 ## ¿Qué es Git?
 Git es un sistema de control de versiones distribuido que permite registrar y gestionar los cambios realizados en archivos, especialmente en proyectos de desarrollo de software. Con Git, cada colaborador tiene una copia completa del historial del proyecto en su máquina, lo que permite trabajar de forma independiente, fusionar cambios, y recuperar versiones anteriores. Su diseño está orientado al rendimiento, la integridad de los datos y la colaboración eficiente entre múltiples desarrolladores.
+
+## Historia de Git
+
+Como muchas de las grandes cosas en esta vida, Git comenzó con un poco de destrucción creativa y una gran polémica.
+
+El kernel de Linux es un proyecto de software de código abierto con un alcance bastante amplio. Durante la mayor parte del mantenimiento del kernel de Linux (1991-2002), los cambios en el software se realizaban a través de parches y archivos. En el 2002, el proyecto del kernel de Linux empezó a usar un **DVCS** propietario llamado **BitKeeper**.
+
+En el 2005, la relación entre la comunidad que desarrollaba el kernel de Linux y la compañía que desarrollaba BitKeeper se vino abajo y la herramienta dejó de ser ofrecida de manera gratuita. Esto impulsó a la comunidad de desarrollo de Linux (y en particular a **Linus Torvalds**, el creador de Linux) a desarrollar su propia herramienta basada en algunas de las lecciones que aprendieron mientras usaban BitKeeper. Algunos de los objetivos del nuevo sistema fueron los siguientes:
+- Velocidad
+- Diseño sencillo
+- Gran soporte para desarrollo no lineal (miles de ramas paralelas)
+- Completamente distribuido
+- Capaz de manejar grandes proyectos (como el kernel de Linux) eficientemente (velocidad y tamaño de los datos)
+
+Desde su nacimiento en el 2005, **Git** ha evolucionado y madurado para ser fácil de usar y conservar sus características iniciales. Es tremendamente rápido, muy eficiente con grandes proyectos y tiene un increíble sistema de **ramificación** (*branching*) para desarrollo no lineal.
