@@ -155,3 +155,21 @@ eliminados o agregados, así como también los archivos que se han añadido al �
 git  status
 ```  
 ![git_status](/img/git_Status.png)
+
+## confirmar cambios
+
+### ¿Qué es un commit?
+En cuanto al concepto de commit, debemos conocer que se refiere a la toma de una fotografía del estado actual de nuestro proyecto en un momento determinado. Cada vez que realizamos un commit, estamos guardando los cambios que hayamos realizado (y que nosotros seleccionemos) en nuestro proyecto en ese momento específico. Es una acción que guarda oficialmente esos cambios en el historial del repositorio. Cada commit incluye un mensaje descriptivo, un identificador único (hash), información del autor y una marca de tiempo, permitiendo rastrear qué se modificó, quién lo hizo y cuándo.
+```bash
+git commit 
+```
+Este comando abrirá un editor de texto predeterminado donde podrás escribir un mensaje de 
+confirmación completo. Un  mensaje  de  confirmación  se  compone de un breve resumen de los cambios, una línea vacía y una descripción completa de los cambios después. 
+ 
+### confirmar cambios con un mensaje 
+Puedes  agregar  un  mensaje  de  confirmación  sin  abrir  el  editor.  Este  comando  solo  te 
+permite especificar un breve resumen para tu mensaje de confirmación. 
+```bash
+git commit -m "your commit message here"
+``` 
+![git_status](/img/git_commit.png)
