@@ -172,4 +172,21 @@ permite especificar un breve resumen para tu mensaje de confirmación.
 ```bash
 git commit -m "your commit message here"
 ``` 
-![git_status](/img/git_commit.png)
+![git_commit](/img/git_commit.png)
+
+## ver tu historial de confirmaciones, incluidos los cambios 
+Para visualizar las fotografías realizadas en un repositorio de Git, se utiliza el comando:
+```bash
+git log
+``` 
+Al ejecutarlo, Git muestra una lista con todos los commits realizados en el repositorio, incluyendo el hash único que identifica a cada uno de ellos. Esta información es útil para rastrear la evolución del proyecto y asegurarnos de que todas las fotografías se han almacenado según lo esperado.
+Además de mostrar los commits, git log también comparte información sobre el autor de cada uno de
+ellos, incluyendo su nombre de usuario y la dirección de correo electrónico. Esta información es importante porque ayuda a identificar quién realizó cada cambio en el código fuente.
+
+![git_log](/img/git_log.png)
+
+### ¿Qué es un hash?
+Es una suma de comprobación generada utilizando el algoritmo **SHA-1** que identifica de manera única el contenido de un archivo o directorio en el repositorio. Esta cadena de 40 caracteres hexadecimales (compuesta por números del 0 al 9 y letras de la a a la f) se calcula a partir de los datos de un archivo o estructura en Git. Los hash son fundamentales para garantizar la integridad de los datos, ya que cualquier cambio en el contenido de un archivo genera un hash diferente, lo que permite a Git detectar alteraciones o corrupción. Git usa estos valores hash para almacenar y rastrear los archivos en lugar de los nombres de archivo, asegurando que el contenido se mantenga consistente y seguro.
+
+### ¿Qué es un HEAD?
+Es un puntero que apunta al commit actual en el repositorio. En otras palabras, HEAD indica la posición actual en la línea de tiempo del proyecto. Cuando se realiza un nuevo commit, HEAD se mueve al nuevo commit, convirtiéndose en el commit más actual. Esto nos permite movernos fácilmente entre las diferentes versiones del proyecto y ver exactamente qué cambios se realizaron en cada commit.
