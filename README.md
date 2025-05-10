@@ -139,11 +139,19 @@ El  siguiente  comando  agregará  un  archivo  al  área  de  preparacióno (St
 ```bash
 git add img/
 ```
-![git_init](/img/git_Add.png)
+![git_add](/img/git_Add.png)
 
 Si desea agregar todos los archivos de su proyecto al área de preparación, puede usar un 
-comodín **.**y se agregarán todos los archivos automáticamente. 
+comodín .y se agregarán todos los archivos automáticamente. 
 ```bash
 git add .
 ```
-![git_init](/img/git_Add_..png)
+![git_add](/img/git_Add_..png)
+
+## Revisando el Estado de tus Archivos
+Este comando muestra el estado actual del repositorio, incluyendo los archivos modificados,
+eliminados o agregados, así como también los archivos que se han añadido al área de Stage, junto con los que aún no han sido seguidos por Git.
+```bash
+git  status
+```  
+![git_status](/img/git_Status.png)
