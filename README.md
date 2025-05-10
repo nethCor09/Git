@@ -131,96 +131,19 @@ git init
 Git creará una carpeta oculta llamada **.git**, que contendrá todas las referencias asociadas al
 sistema de control de versiones.
 
+![git_init](/img/git_init.png)
+
+
 ## Agregar un archivo al área de preparación
 El  siguiente  comando  agregará  un  archivo  al  área  de  preparacióno (Stage).
 ```bash
-git add filename_here
+git add img/
 ```
+![git_init](/img/git_Add.png)
+
 Si desea agregar todos los archivos de su proyecto al área de preparación, puede usar un 
 comodín **.**y se agregarán todos los archivos automáticamente. 
 ```bash
 git add .
 ```
-## Revisando el Estado de tus Archivos
-Este comando muestra el estado actual del repositorio, incluyendo los archivos modificados,
-eliminados o agregados, así como también los archivos que se han añadido al área de Stage, junto con los que aún no han sido seguidos por Git.
-```bash
-git  status
-```  
-
-## confirmar cambios
-
-### ¿Qué es un commit?
-En cuanto al concepto de commit, debemos conocer que se refiere a la toma de una fotografía del estado actual de nuestro proyecto en un momento determinado. Cada vez que realizamos un commit, estamos guardando los cambios que hayamos realizado (y que nosotros seleccionemos) en nuestro proyecto en ese momento específico. Es una acción que guarda oficialmente esos cambios en el historial del repositorio. Cada commit incluye un mensaje descriptivo, un identificador único (hash), información del autor y una marca de tiempo, permitiendo rastrear qué se modificó, quién lo hizo y cuándo.
-```bash
-git commit 
-```
-Este comando abrirá un editor de texto predeterminado donde podrás escribir un mensaje de 
-confirmación completo. Un  mensaje  de  confirmación  se  compone de un breve resumen de los cambios, una línea vacía y una descripción completa de los cambios después. 
- 
-### confirmar cambios con un mensaje 
-Puedes  agregar  un  mensaje  de  confirmación  sin  abrir  el  editor.  Este  comando  solo  te 
-permite especificar un breve resumen para tu mensaje de confirmación. 
-```bash
-git commit -m "your commit message here"
-``` 
-## ver tu historial de confirmaciones, incluidos los cambios 
-Para visualizar las fotografías realizadas en un repositorio de Git, se utiliza el comando:
-```bash
-git log
-``` 
-Al ejecutarlo, Git muestra una lista con todos los commits realizados en el repositorio, incluyendo el hash único que identifica a cada uno de ellos. Esta información es útil para rastrear la evolución del proyecto y asegurarnos de que todas las fotografías se han almacenado según lo esperado.
-Además de mostrar los commits, git log también comparte información sobre el autor de cada uno de
-ellos, incluyendo su nombre de usuario y la dirección de correo electrónico. Esta información es importante porque ayuda a identificar quién realizó cada cambio en el código fuente.
-
-### ¿Qué es un hash?
-Es una suma de comprobación generada utilizando el algoritmo **SHA-1** que identifica de manera única el contenido de un archivo o directorio en el repositorio. Esta cadena de 40 caracteres hexadecimales (compuesta por números del 0 al 9 y letras de la a a la f) se calcula a partir de los datos de un archivo o estructura en Git. Los hash son fundamentales para garantizar la integridad de los datos, ya que cualquier cambio en el contenido de un archivo genera un hash diferente, lo que permite a Git detectar alteraciones o corrupción. Git usa estos valores hash para almacenar y rastrear los archivos en lugar de los nombres de archivo, asegurando que el contenido se mantenga consistente y seguro.
-
-### ¿Qué es un HEAD?
-Es un puntero que apunta al commit actual en el repositorio. En otras palabras, HEAD indica la posición actual en la línea de tiempo del proyecto. Cuando se realiza un nuevo commit, HEAD se mueve al nuevo commit, convirtiéndose en el commit más actual. Esto nos permite movernos fácilmente entre las diferentes versiones del proyecto y ver exactamente qué cambios se realizaron en cada commit.
-
-## volver al estado anterior
-Despues de hacer algunos cambios en nuestro código y deseamos volver al estado anterior
-sin guardar las modificaciones. Para hacer esto, podemos usar el comando git checkout. Este comando nos permite situarnos en un punto específico del historial de commits.
-
-```bash
-git checkout <archivo>
-```
-## Reset
-Al lanzar este comando se nos informará de que se perderán los cambios en los archivos que no forman parte de un commit. Hecho esto, recuperaremos el contenido original del último punto de guardado de la rama
-
-```bash
- git reset
-```
-
-## Visualizaciones del Historial
-Git ofrece múltiples formas de explorar el historial de commits, lo cual es útil para comprender la evolución del proyecto, especialmente cuando se trabaja con ramas.
-
-- Este comando muestra una representación gráfica del historial de commits utilizando caracteres ASCII. Es ideal para visualizar la estructura del proyecto, ver cómo se ramifican las ramas y cómo se fusionan entre sí. Ayuda a entender la relación entre los diferentes commits y ramas de manera clara y jerárquica.
-```bash
-    git log --graph
-```
-- Este comando simplifica la salida del historial al mostrar cada commit en una sola línea, mostrando el hash abreviado y el mensaje del commit. Es útil para hacer una revisión rápida de muchos commits sin tanto detalle.
-```bash
-    git log --pretty=oneline
-```
-- Este comando añade decoraciones útiles al historial, como las referencias a ramas (HEAD, main, etc.) y etiquetas (tags). Esto facilita ver en qué punto del historial se encuentra cada rama o versión del proyecto.
-```bash
-    git log --decorate
-```
-- Esta combinación muestra la estructura gráfica del historial, cada commit en una sola línea, y añade las decoraciones de ramas y etiquetas. Es muy útil para tener una visión clara, compacta y detallada del estado del repositorio.
-```bash
-    git log --graph --oneline --decorate
-```
-## Alias
-En Git, los alias permiten crear atajos personalizados para comandos que usamos con frecuencia o que son largos y difíciles de recordar. Esta funcionalidad se configura a través del comando git config, y si se utiliza con el modificador --global, el alias estará disponible para todas las sesiones del usuario en el sistema. Crear un alias es especialmente útil para agilizar el trabajo diario con Git, ya que reduce la cantidad de escritura y mejora la productividad en la terminal.
-
-Para crear un alias, utiliza el siguiente formato:
-```bash
-git config --global alias.<nombre_del_alias> '<comando_git>'
-```
-## Ignorar Archivos
-En Git, a veces no queremos incluir ciertos archivos en el repositorio, como archivos temporales, configuraciones locales o datos sensibles. Para eso, usamos el archivo .gitignore, que permite indicarle a Git qué archivos o carpetas debe ignorar. Este archivo se coloca en la raíz del proyecto y define reglas que excluyen esos elementos del control de versiones, sin eliminarlos del sistema.
-```bash
-touch .gitignore
-```
+![git_init](/img/git_Add_..png)
